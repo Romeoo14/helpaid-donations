@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpAid - Medical Donations</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .app-container {
+            background: white;
+            width: 90%;
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .app-header {
+            background: #ff5252;
+            color: white;
+            padding: 15px;
+            border-radius: 8px 8px 0 0;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .logo {
+            width: 80px;
+            margin-top: 10px;
+        }
+        h2 {
+            color: #333;
+            margin-top: 15px;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #ff5252;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        button:hover {
+            background-color: #e04848;
+        }
+        .donate-section {
+            margin-top: 20px;
+        }
+        .donate-button {
+            background-color: #28a745;
+        }
+        .donate-button:hover {
+            background-color: #218838;
+        }
+        .share-section {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="app-container">
+    <div class="app-header">HelpAid - Medical Donations</div>
+    
+    <img src="https://i.imgur.com/6o4VxXc.png" class="logo" alt="HelpAid Logo">
+
+    <h2>Request Medical Help</h2>
+    <p>Fill out the form to submit a medical emergency request.</p>
+    
+    <form action="https://formspree.io/f/example" method="POST" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Describe the medical emergency" required></textarea>
+        <input type="number" name="amount" placeholder="Amount Needed (INR)" required>
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Submit Request</button>
+    </form>
+
+    <div class="donate-section">
+        <h2>Support a Medical Cause</h2>
+        <p>Click below to donate and save lives.</p>
+        <a href="upi://pay?pa=your-upi-id@upi&pn=Donation&cu=INR" target="_blank">
+            <button class="donate-button">Donate Now</button>
+        </a>
+    </div>
+
+    <div class="share-section">
+        <h2>Share to Earn</h2>
+        <p>Share this donation request to your Instagram Story and earn rewards!</p>
+        <a href="https://www.instagram.com" target="_blank">
+            <button>Share on Instagram</button>
+        </a>
+    </div>
+</div>
+
+</body>
+</html>
